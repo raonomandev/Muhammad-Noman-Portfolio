@@ -1,29 +1,6 @@
-const roles = [
-  {
-    company: "Stripe-scale Fintech (contract)",
-    role: "Staff Backend Engineer",
-    period: "2023 — Present",
-    body: "Lead architect for the cross-border payments platform. Cut settlement latency by 62% and rebuilt the reconciliation engine on an event-sourced ledger.",
-  },
-  {
-    company: "Northwind Cloud",
-    role: "Senior Backend Engineer",
-    period: "2020 — 2023",
-    body: "Owned the multi-tenant control plane serving 200k+ workloads. Migrated the monolith to gRPC microservices with zero-downtime cutover.",
-  },
-  {
-    company: "Helix Data",
-    role: "Backend Engineer",
-    period: "2018 — 2020",
-    body: "Built the real-time analytics ingestion pipeline handling 2B events/day on Kafka + ClickHouse with 99.99% delivery guarantee.",
-  },
-  {
-    company: "Freelance / Open source",
-    role: "Consulting Engineer",
-    period: "2016 — 2018",
-    body: "Shipped payment integrations, auth systems, and API rewrites for early-stage YC and seed-stage startups across the US and EU.",
-  },
-];
+import { Briefcase } from "lucide-react";
+
+const tech = ["Python", "Django", "Django REST Framework", "MySQL", "REST APIs", "Git"];
 
 export function Experience() {
   return (
@@ -34,28 +11,44 @@ export function Experience() {
             // experience
           </p>
           <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
-            A decade of shipping <span className="gradient-text">production systems</span>.
+            Where I've <span className="gradient-text">worked</span>.
           </h2>
         </div>
 
-        <ol className="mt-14 relative border-l border-white/10 pl-6 sm:pl-8 space-y-8">
-          {roles.map((r) => (
-            <li key={r.company} className="relative">
-              <span className="absolute -left-[34px] sm:-left-[42px] top-2 grid h-4 w-4 place-items-center rounded-full btn-gradient animate-pulse-glow" />
-              <div className="glass-card rounded-2xl p-6">
-                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3 sm:flex sm:flex-wrap sm:justify-between">
-                  <div className="min-w-0">
-                    <h3 className="truncate font-semibold text-lg">{r.role}</h3>
-                    <p className="text-sm text-muted-foreground truncate">{r.company}</p>
-                  </div>
-                  <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-mono text-muted-foreground">
-                    {r.period}
+        <ol className="mt-14 relative border-l border-white/10 pl-6 sm:pl-8">
+          <li className="relative">
+            <span className="absolute -left-[34px] sm:-left-[42px] top-2 grid h-4 w-4 place-items-center rounded-full btn-gradient animate-pulse-glow" />
+            <div className="glass-card rounded-2xl p-6 sm:p-8">
+              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3 sm:flex sm:flex-wrap sm:justify-between">
+                <div className="flex min-w-0 items-center gap-3">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl btn-gradient">
+                    <Briefcase className="h-5 w-5" />
                   </span>
+                  <div className="min-w-0">
+                    <h3 className="truncate font-semibold text-lg">Backend Developer Intern</h3>
+                    <p className="text-sm text-muted-foreground truncate">Enigmatix</p>
+                  </div>
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{r.body}</p>
+                <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-mono text-muted-foreground">
+                  Internship
+                </span>
               </div>
-            </li>
-          ))}
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+                Worked on backend development, API development, authentication systems and
+                professional software development workflows.
+              </p>
+              <ul className="mt-5 flex flex-wrap gap-1.5">
+                {tech.map((t) => (
+                  <li
+                    key={t}
+                    className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-mono text-muted-foreground"
+                  >
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
         </ol>
       </div>
     </section>
