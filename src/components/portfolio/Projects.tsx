@@ -1,33 +1,29 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github, ShoppingCart, FileText, Hospital } from "lucide-react";
 
 const projects = [
   {
-    title: "Ledger Core",
-    subtitle: "Double-entry payments engine",
-    body: "A distributed, strongly-consistent ledger built in Go handling 40M+ daily transactions across 12 currencies with sub-10ms p99 latency.",
-    stack: ["Go", "PostgreSQL", "Kafka", "gRPC"],
-    metric: "40M req/day",
+    icon: ShoppingCart,
+    title: "E-Commerce Backend API",
+    description:
+      "REST API based ecommerce backend built with Django REST Framework — authentication, product management, cart and orders.",
+    features: ["Authentication", "Product Management", "Cart System", "Order Management", "JWT Authentication"],
+    tech: ["Python", "Django", "DRF", "MySQL"],
   },
   {
-    title: "Sentinel API Gateway",
-    subtitle: "Zero-trust ingress",
-    body: "Open-source Rust API gateway with mTLS, adaptive rate limiting, and per-route policy DSL. Deployed at 3 unicorn startups.",
-    stack: ["Rust", "Redis", "WASM", "Envoy"],
-    metric: "3.2k GitHub stars",
+    icon: FileText,
+    title: "Blog API",
+    description:
+      "Backend API for blog management with authentication and full CRUD operations for posts, comments and users.",
+    features: ["JWT Auth", "CRUD", "Comments", "Permissions"],
+    tech: ["Python", "Django", "DRF", "SQLite"],
   },
   {
-    title: "StreamOps",
-    subtitle: "Real-time analytics pipeline",
-    body: "Event streaming platform ingesting IoT telemetry into ClickHouse with schema evolution and exactly-once delivery guarantees.",
-    stack: ["Python", "Kafka", "ClickHouse", "K8s"],
-    metric: "2B events/day",
-  },
-  {
-    title: "AuthForge",
-    subtitle: "OIDC identity provider",
-    body: "Multi-tenant OAuth2/OIDC server with WebAuthn, SCIM provisioning, and SOC 2-ready audit logs. Ships as a single binary.",
-    stack: ["Go", "PostgreSQL", "OpenTelemetry"],
-    metric: "SOC 2 Type II",
+    icon: Hospital,
+    title: "Hospital Management System",
+    description:
+      "System designed for managing hospital related workflows — patients, doctors, appointments and records.",
+    features: ["Patient Records", "Appointments", "Role-based Access"],
+    tech: ["Python", "Django", "MySQL"],
   },
 ];
 
@@ -41,11 +37,11 @@ export function Projects() {
               // selected work
             </p>
             <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
-              Projects with <span className="gradient-text">real load</span> behind them.
+              Featured <span className="gradient-text">Projects</span>.
             </h2>
           </div>
           <a
-            href="https://github.com"
+            href="https://github.com/raonomandev"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -54,30 +50,29 @@ export function Projects() {
           </a>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
             <article
               key={p.title}
-              className="glass-card group relative rounded-3xl p-7 overflow-hidden"
+              className="glass-card group relative rounded-3xl p-7 overflow-hidden flex flex-col"
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{ background: "var(--gradient-glow)" }}
               />
-              <div className="relative">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs font-mono uppercase tracking-widest text-primary">
-                      {p.subtitle}
-                    </p>
-                    <h3 className="mt-2 text-2xl font-bold">{p.title}</h3>
-                  </div>
-                  <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-mono text-muted-foreground shrink-0">
-                    {p.metric}
-                  </span>
+              <div className="relative flex flex-col h-full">
+                <div
+                  className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 mb-5 grid place-items-center"
+                  style={{ background: "var(--gradient-hero)" }}
+                >
+                  <p.icon className="h-14 w-14 text-white/90 group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{p.body}</p>
-                <ul className="mt-5 flex flex-wrap gap-1.5">
-                  {p.stack.map((s) => (
+                <h3 className="text-xl font-bold">{p.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {p.description}
+                </p>
+                <ul className="mt-4 flex flex-wrap gap-1.5">
+                  {p.tech.map((s) => (
                     <li
                       key={s}
                       className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-mono text-muted-foreground"
@@ -86,18 +81,20 @@ export function Projects() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 flex items-center gap-4 text-sm">
+                <div className="mt-6 flex items-center gap-3 pt-4 border-t border-white/10">
                   <a
-                    href="#"
-                    className="inline-flex items-center gap-1 text-foreground hover:gradient-text transition-all"
+                    href="https://github.com/raonomandev"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
                   >
-                    Case study <ArrowUpRight className="h-4 w-4" />
+                    <Github className="h-3.5 w-3.5" /> Code
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
+                    className="inline-flex items-center gap-1.5 rounded-lg btn-gradient px-3 py-1.5 text-xs font-medium"
                   >
-                    <Github className="h-4 w-4" /> Source
+                    Live demo <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
                 </div>
               </div>

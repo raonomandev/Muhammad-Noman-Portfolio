@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { Mail, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Send, Github, Linkedin } from "lucide-react";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
@@ -26,71 +26,67 @@ export function Contact() {
                   Let's build <span className="gradient-text">something</span>.
                 </h2>
                 <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                  Open to staff & principal engineer roles, contract work, and open-source
-                  collaborations. Usually reply within 24 hours.
+                  Open to backend roles, contract work and freelance projects. I usually reply
+                  within 24 hours.
                 </p>
                 <ul className="mt-8 space-y-3 text-sm">
                   <li className="flex items-center gap-3">
                     <span className="grid h-9 w-9 place-items-center rounded-lg btn-gradient shrink-0">
                       <Mail className="h-4 w-4" />
                     </span>
-                    <span className="text-muted-foreground">alex@alexchen.dev</span>
+                    <span className="text-muted-foreground">raonoman.dev@gmail.com</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="grid h-9 w-9 place-items-center rounded-lg btn-gradient shrink-0">
                       <MapPin className="h-4 w-4" />
                     </span>
-                    <span className="text-muted-foreground">Remote — GMT+1</span>
+                    <span className="text-muted-foreground">Remote — worldwide</span>
                   </li>
                 </ul>
                 <div className="mt-10 flex items-center gap-2">
-                  {[Github, Linkedin, Twitter].map((I, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 transition-colors hover:border-primary/40 hover:text-primary"
-                    >
-                      <I className="h-4 w-4" />
-                    </a>
-                  ))}
+                  <a
+                    href="https://github.com/raonomandev"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="GitHub"
+                    className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 transition-colors hover:border-primary/40 hover:text-primary"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/rao-noman-dev/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="LinkedIn"
+                    className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 transition-colors hover:border-primary/40 hover:text-primary"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
                 </div>
               </div>
             </div>
 
             <form onSubmit={onSubmit} className="p-8 sm:p-12 space-y-5">
-              <div className="grid gap-5 sm:grid-cols-2">
-                <label className="block">
-                  <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
-                    Name
-                  </span>
-                  <input
-                    required
-                    type="text"
-                    className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
-                    placeholder="Ada Lovelace"
-                  />
-                </label>
-                <label className="block">
-                  <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
-                    Email
-                  </span>
-                  <input
-                    required
-                    type="email"
-                    className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
-                    placeholder="ada@example.com"
-                  />
-                </label>
-              </div>
               <label className="block">
                 <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
-                  Subject
+                  Name
                 </span>
                 <input
                   required
                   type="text"
-                  className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
-                  placeholder="Project idea, role, or collaboration"
+                  className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
+                  placeholder="Your full name"
+                />
+              </label>
+              <label className="block">
+                <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
+                  Email
+                </span>
+                <input
+                  required
+                  type="email"
+                  className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
+                  placeholder="you@example.com"
                 />
               </label>
               <label className="block">

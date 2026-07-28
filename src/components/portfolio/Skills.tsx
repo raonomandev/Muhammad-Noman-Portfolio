@@ -1,54 +1,25 @@
-import {
-  Code2,
-  Database,
-  Server,
-  Boxes,
-  GitBranch,
-  Workflow,
-  Network,
-  Lock,
-} from "lucide-react";
+import { Server, Database, Layout, Wrench } from "lucide-react";
 
 const groups = [
   {
-    icon: Code2,
-    title: "Languages",
-    items: ["Go", "Rust", "Python", "TypeScript", "Java", "SQL"],
-  },
-  {
     icon: Server,
-    title: "Frameworks & Runtimes",
-    items: ["gRPC", "FastAPI", "Node.js", "Actix", "GraphQL", "tRPC"],
+    title: "Backend",
+    items: ["Python", "Django", "Django REST Framework", "REST APIs", "JWT Authentication"],
   },
   {
     icon: Database,
-    title: "Datastores",
-    items: ["PostgreSQL", "Redis", "ClickHouse", "Kafka", "MongoDB", "Elasticsearch"],
+    title: "Database",
+    items: ["MySQL", "PostgreSQL", "SQLite"],
   },
   {
-    icon: Boxes,
-    title: "Infrastructure",
-    items: ["Kubernetes", "Docker", "Terraform", "AWS", "GCP", "Nginx"],
+    icon: Layout,
+    title: "Frontend",
+    items: ["React", "Next.js", "Tailwind CSS", "JavaScript"],
   },
   {
-    icon: Workflow,
-    title: "Observability",
-    items: ["Prometheus", "Grafana", "OpenTelemetry", "Jaeger", "Datadog", "Sentry"],
-  },
-  {
-    icon: Lock,
-    title: "Security & Auth",
-    items: ["OAuth2 / OIDC", "JWT", "mTLS", "Vault", "Zero-trust", "OWASP"],
-  },
-  {
-    icon: GitBranch,
-    title: "DevOps",
-    items: ["GitHub Actions", "ArgoCD", "Helm", "Ansible", "Pulumi", "Buildkite"],
-  },
-  {
-    icon: Network,
-    title: "Architecture",
-    items: ["Event-driven", "CQRS", "Microservices", "DDD", "Saga", "Serverless"],
+    icon: Wrench,
+    title: "Tools",
+    items: ["Git", "GitHub", "Postman", "Docker"],
   },
 ];
 
@@ -61,19 +32,19 @@ export function Skills() {
             // stack
           </p>
           <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
-            Tools I reach for <span className="gradient-text">every day</span>.
+            Skills & <span className="gradient-text">Technologies</span>.
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            A pragmatic toolchain tuned for reliability, observability, and speed of iteration.
+            A pragmatic toolchain tuned for reliability, clean architecture, and speed.
           </p>
         </div>
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {groups.map((g) => (
-            <div key={g.title} className="glass-card rounded-2xl p-5">
+            <div key={g.title} className="glass-card rounded-2xl p-6">
               <div className="flex items-center gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-lg btn-gradient shrink-0">
-                  <g.icon className="h-4 w-4" />
+                <span className="grid h-11 w-11 place-items-center rounded-xl btn-gradient shrink-0">
+                  <g.icon className="h-5 w-5" />
                 </span>
                 <h3 className="font-semibold">{g.title}</h3>
               </div>
