@@ -57,11 +57,12 @@ export function Projects() {
           </a>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
+        <div className="mt-14 grid gap-6 md:gap-7 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p, i) => (
             <article
               key={p.title}
-              className="glass-card group relative rounded-3xl p-7 overflow-hidden flex flex-col"
+              style={{ animationDelay: `${i * 90}ms` }}
+              className="glass-card group relative rounded-3xl p-7 overflow-hidden flex flex-col animate-fade-in transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10"
             >
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -72,9 +73,11 @@ export function Projects() {
                   className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 mb-5 grid place-items-center"
                   style={{ background: "var(--gradient-hero)" }}
                 >
-                  <p.icon className="h-14 w-14 text-white/90 group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-transparent" />
+                  <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:24px_24px]" />
+                  <p.icon className="relative h-14 w-14 text-white/95 drop-shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500" />
                 </div>
-                <h3 className="text-xl font-bold">{p.title}</h3>
+                <h3 className="text-xl font-bold tracking-tight">{p.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   {p.description}
                 </p>
@@ -82,7 +85,7 @@ export function Projects() {
                   {p.tech.map((s) => (
                     <li
                       key={s}
-                      className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-mono text-muted-foreground"
+                      className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-mono text-muted-foreground transition-colors group-hover:border-primary/30 group-hover:text-foreground"
                     >
                       {s}
                     </li>
