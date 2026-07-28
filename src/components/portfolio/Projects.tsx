@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, ShoppingCart, FileText, Hospital } from "lucide-react";
+import { ArrowUpRight, Github, ShoppingCart, FileText, CheckSquare } from "lucide-react";
 
 const projects = [
   {
@@ -18,12 +18,19 @@ const projects = [
     tech: ["Python", "Django", "DRF", "SQLite"],
   },
   {
-    icon: Hospital,
-    title: "Hospital Management System",
+    icon: CheckSquare,
+    title: "Todo Application API",
     description:
-      "System designed for managing hospital related workflows — patients, doctors, appointments and records.",
-    features: ["Patient Records", "Appointments", "Role-based Access"],
-    tech: ["Python", "Django", "MySQL"],
+      "A scalable task management backend API built with Django REST Framework featuring authentication, task management and user-based workflows.",
+    features: [
+      "User Authentication",
+      "JWT Authentication",
+      "Create, Update and Delete Tasks",
+      "Task Filtering",
+      "User-specific Data Handling",
+      "RESTful API Architecture",
+    ],
+    tech: ["Python", "Django", "DRF", "PostgreSQL", "JWT"],
   },
 ];
 
