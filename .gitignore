@@ -30,3 +30,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Django
+backend/env/
+backend/__pycache__/
+backend/**/*.pyc
