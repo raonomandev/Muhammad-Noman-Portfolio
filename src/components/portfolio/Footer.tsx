@@ -1,7 +1,7 @@
 import { Github, Linkedin } from "lucide-react";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
+  { href: "#top", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
@@ -23,7 +23,7 @@ export function Footer() {
           <div className="grid gap-10 md:grid-cols-3 md:gap-8">
             {/* Brand + tagline */}
             <div className="md:col-span-1">
-              <a href="#home" className="inline-flex items-center gap-1 font-bold text-2xl">
+              <a href="#top" className="inline-flex items-center gap-1 font-bold text-2xl">
                 <span className="gradient-text">Rao</span>
                 <span className="text-primary">.</span>
               </a>
