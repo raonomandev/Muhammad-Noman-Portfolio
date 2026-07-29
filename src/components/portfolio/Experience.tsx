@@ -1,6 +1,6 @@
 import { Briefcase } from "lucide-react";
 
-const tech = ["Python", "Django", "Django REST Framework", "MySQL", "REST APIs", "Git"];
+const tech = ["Python", "Django", "Django REST Framework", "MySQL", "SQLite", "Git", "GitHub"];
 
 export function Experience() {
   return (
@@ -34,8 +34,9 @@ export function Experience() {
                 </span>
               </div>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                Worked on backend development, API development, authentication systems and
-                professional software development workflows.
+                Worked on backend development using Python, Django and Django REST Framework
+                while gaining practical experience in REST APIs, authentication, database
+                management and collaborative software development workflows.
               </p>
               <ul className="mt-5 flex flex-wrap gap-1.5">
                 {tech.map((t) => (

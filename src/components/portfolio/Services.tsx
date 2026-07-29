@@ -1,25 +1,25 @@
-import { Server, Code2, Database, Globe } from "lucide-react";
+import { Server, Code2, Database, Plug } from "lucide-react";
 
 const services = [
   {
     icon: Server,
     title: "Backend Development",
-    body: "Scalable backend systems architected with Django and clean, testable code.",
+    body: "Building scalable backend applications using Python, Django and Django REST Framework.",
   },
   {
     icon: Code2,
     title: "REST API Development",
-    body: "Secure, well-documented REST APIs with authentication, validation and versioning.",
+    body: "Creating secure REST APIs with JWT Authentication and clean architecture.",
   },
   {
     icon: Database,
     title: "Database Design",
-    body: "Relational schema design, indexing and query optimization for MySQL & PostgreSQL.",
+    body: "Designing and managing relational databases using MySQL and SQLite.",
   },
   {
-    icon: Globe,
-    title: "Website Development",
-    body: "Full-stack websites pairing Django backends with modern React/Next.js frontends.",
+    icon: Plug,
+    title: "API Integration",
+    body: "Integrating backend APIs into applications while maintaining security and scalability.",
   },
 ];
 
@@ -32,7 +32,7 @@ export function Services() {
             // services
           </p>
           <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
-            What I <span className="gradient-text">offer</span>.
+            <span className="gradient-text">Services</span>.
           </h2>
         </div>
 

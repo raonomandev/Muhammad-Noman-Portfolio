@@ -88,7 +88,7 @@ export function Footer() {
               © 2026 Rao Noman. All rights reserved.
             </p>
             <p className="text-xs font-mono text-muted-foreground/70">
-              Crafted with precision · Backend focused
+              Backend Developer | Python · Django · Django REST Framework
             </p>
           </div>
         </div>

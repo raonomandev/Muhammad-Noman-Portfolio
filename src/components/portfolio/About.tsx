@@ -4,17 +4,17 @@ const pillars = [
   {
     icon: Server,
     title: "Backend Development",
-    body: "Building scalable backend systems using Python, Django and Django REST Framework.",
+    body: "Building scalable backend applications using Python, Django and Django REST Framework.",
   },
   {
     icon: Code2,
-    title: "API Development",
-    body: "Designing secure REST APIs with authentication and clean architecture.",
+    title: "REST API Development",
+    body: "Designing secure REST APIs with authentication, CRUD operations and JWT Authentication.",
   },
   {
     icon: Database,
     title: "Database Management",
-    body: "Working with relational databases and optimized data handling.",
+    body: "Working with relational databases using MySQL and SQLite while writing optimized queries.",
   },
 ];
 
@@ -30,15 +30,26 @@ export function About() {
             About <span className="gradient-text">Me</span>.
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            I'm Rao Noman, a Software Engineering student and Backend Developer passionate about
-            building reliable and scalable web applications.
+            I'm Rao Noman, a Software Engineering student and Backend Developer with practical
+            experience building backend applications and REST APIs using Python, Django and
+            Django REST Framework.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            I specialize in{" "}
-            <span className="text-foreground font-medium">Python</span>,{" "}
-            <span className="text-foreground font-medium">Django</span> and{" "}
-            <span className="text-foreground font-medium">Django REST Framework</span>, creating
-            secure APIs and backend systems.
+            My primary focus is{" "}
+            <span className="text-foreground font-medium">backend development</span>,{" "}
+            <span className="text-foreground font-medium">authentication systems</span>,{" "}
+            <span className="text-foreground font-medium">RESTful API design</span> and{" "}
+            <span className="text-foreground font-medium">relational database management</span>.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            During my Backend Development Internship at{" "}
+            <span className="text-foreground font-medium">Enigmatix</span>, I worked on backend
+            development workflows, API implementation, authentication and collaborative software
+            development.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            I continuously improve my backend skills by building practical projects and following
+            clean coding practices.
           </p>
         </div>
 

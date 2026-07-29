@@ -12,20 +12,26 @@ import { Footer } from "@/components/portfolio/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rao Noman — Backend Developer | Python, Django & REST APIs" },
+      { title: "Rao Noman | Backend Developer" },
       {
         name: "description",
         content:
-          "Portfolio of Rao Noman — Backend Developer specializing in Python, Django, Django REST Framework and scalable REST APIs.",
+          "Backend Developer specializing in Python, Django, Django REST Framework, REST APIs and backend application development.",
       },
-      { property: "og:title", content: "Rao Noman — Backend Developer" },
+      { property: "og:title", content: "Rao Noman | Backend Developer" },
       {
         property: "og:description",
         content:
-          "Scalable web applications and secure REST APIs built with Python, Django and modern technologies.",
+          "Backend Developer specializing in Python, Django, Django REST Framework, REST APIs and backend application development.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Rao Noman | Backend Developer" },
+      {
+        name: "twitter:description",
+        content:
+          "Backend Developer specializing in Python, Django, Django REST Framework, REST APIs and backend application development.",
+      },
     ],
   }),
   component: Index,

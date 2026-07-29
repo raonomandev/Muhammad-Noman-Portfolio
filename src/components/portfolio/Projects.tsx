@@ -1,36 +1,29 @@
-import { ArrowUpRight, Github, ShoppingCart, FileText, CheckSquare } from "lucide-react";
+import { Github, ShoppingCart, FileText, CheckSquare } from "lucide-react";
 
 const projects = [
   {
     icon: ShoppingCart,
     title: "E-Commerce Backend API",
     description:
-      "REST API based ecommerce backend built with Django REST Framework — authentication, product management, cart and orders.",
-    features: ["Authentication", "Product Management", "Cart System", "Order Management", "JWT Authentication"],
-    tech: ["Python", "Django", "DRF", "MySQL"],
+      "A RESTful E-Commerce backend built with Django REST Framework featuring JWT Authentication, Product Management, Cart Management and Order Processing.",
+    tech: ["Python", "Django", "DRF", "SQLite", "JWT", "Git"],
+    repo: "https://github.com/raonomandev/ecommerce-backend-api",
   },
   {
     icon: FileText,
-    title: "Blog API",
+    title: "Blog Management API",
     description:
-      "Backend API for blog management with authentication and full CRUD operations for posts, comments and users.",
-    features: ["JWT Auth", "CRUD", "Comments", "Permissions"],
-    tech: ["Python", "Django", "DRF", "SQLite"],
+      "A Blog Management REST API with authentication, CRUD operations and clean backend architecture built using Django REST Framework.",
+    tech: ["Python", "Django", "DRF", "SQLite", "JWT"],
+    repo: "https://github.com/raonomandev/Blog-Management-Application-",
   },
   {
     icon: CheckSquare,
-    title: "Todo Application API",
+    title: "Todo Management Application",
     description:
-      "A scalable task management backend API built with Django REST Framework featuring authentication, task management and user-based workflows.",
-    features: [
-      "User Authentication",
-      "JWT Authentication",
-      "Create, Update and Delete Tasks",
-      "Task Filtering",
-      "User-specific Data Handling",
-      "RESTful API Architecture",
-    ],
-    tech: ["Python", "Django", "DRF", "PostgreSQL", "JWT"],
+      "A Todo Management REST API supporting authentication, CRUD operations and secure backend architecture.",
+    tech: ["Python", "Django", "DRF", "SQLite", "JWT"],
+    repo: "https://github.com/raonomandev/Todo-Management-Application",
   },
 ];
 
@@ -93,18 +86,13 @@ export function Projects() {
                 </ul>
                 <div className="mt-6 flex items-center gap-3 pt-4 border-t border-white/10">
                   <a
-                    href="https://github.com/raonomandev"
+                    href={p.repo}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label={`${p.title} GitHub repository`}
                     className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
                   >
                     <Github className="h-3.5 w-3.5" /> Code
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-1.5 rounded-lg btn-gradient px-3 py-1.5 text-xs font-medium"
-                  >
-                    Live demo <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
                 </div>
               </div>
