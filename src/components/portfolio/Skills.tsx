@@ -1,25 +1,33 @@
-import { Server, Database, Layout, Wrench } from "lucide-react";
+import { Server, Database, Wrench, GraduationCap } from "lucide-react";
 
 const groups = [
   {
     icon: Server,
     title: "Backend",
-    items: ["Python", "Django", "Django REST Framework", "REST APIs", "JWT Authentication"],
+    items: [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "REST APIs",
+      "JWT Authentication",
+      "CRUD Operations",
+      "Authentication",
+    ],
   },
   {
     icon: Database,
-    title: "Database",
-    items: ["MySQL", "PostgreSQL", "SQLite"],
-  },
-  {
-    icon: Layout,
-    title: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "JavaScript"],
+    title: "Databases",
+    items: ["MySQL", "SQLite"],
   },
   {
     icon: Wrench,
     title: "Tools",
-    items: ["Git", "GitHub", "Postman", "Docker"],
+    items: ["Git", "GitHub", "Postman", "VS Code"],
+  },
+  {
+    icon: GraduationCap,
+    title: "Learning",
+    items: ["Docker"],
   },
 ];
 
