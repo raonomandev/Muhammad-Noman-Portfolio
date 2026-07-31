@@ -13,5 +13,3 @@ class ContactUpdateView(generics.RetrieveUpdateDestroyAPIView):
     queryset=ContactModel.objects.all()
     serializer_class=ContactSerializer
 
-    # def get_queryset(self):
-    #     return ContactModel.objects.get()
