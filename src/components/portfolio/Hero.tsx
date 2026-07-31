@@ -35,7 +35,7 @@ export function Hero() {
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="/resume.pdf"
+                href="public\Muhammad-Noman-Resume.pdf.pdf"
                 download="Rao-Noman-Resume.pdf"
                 target="_blank"
                 rel="noopener"
