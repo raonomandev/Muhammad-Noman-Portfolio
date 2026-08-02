@@ -1,11 +1,20 @@
+import os
 from unittest.mock import patch
 
 from django.core import mail
-from django.test import override_settings
+from django.test import SimpleTestCase, override_settings
 from rest_framework.test import APITestCase
+
+from config import settings as settings_module
 
 from .models import ContactModel
 from .tasks import send_contact_confirmation_email
+
+
+class EmailSettingsTests(SimpleTestCase):
+    def test_email_password_is_normalized(self):
+        with patch.dict(os.environ, {"EMAIL_HOST_PASSWORD": "qccs qwcd swtw vtqe"}, clear=False):
+            self.assertEqual(settings_module._get_email_password(), "qccsqwcdswtwvtqe")
 
 
 @override_settings(
@@ -55,3 +64,18 @@ class ContactEmailFlowTests(APITestCase):
         self.assertIn("Jane Doe", owner_email.body)
         self.assertIn("jane@example.com", owner_email.body)
         self.assertIn("Hello from the test suite.", owner_email.body)
+
+    def test_contact_submission_falls_back_to_direct_email_when_celery_is_unavailable(self):
+        with patch("Contact.views.send_contact_confirmation_email.delay", side_effect=RuntimeError("broker unavailable")):
+            response = self.client.post(
+                "/api/contact/",
+                {
+                    "name": "Jane Doe",
+                    "email": "jane@example.com",
+                    "message": "Hello from the fallback test.",
+                },
+                format="json",
+            )
+
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(len(mail.outbox), 2)

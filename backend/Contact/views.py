@@ -23,6 +23,13 @@ class ContactView(generics.ListCreateAPIView):
                 "Failed to enqueue confirmation email for contact id=%s",
                 contact.id,
             )
+            try:
+                send_contact_confirmation_email(contact.id)
+            except Exception:
+                logger.exception(
+                    "Failed to send confirmation email directly for contact id=%s",
+                    contact.id,
+                )
 
 
 class ContactUpdateView(generics.RetrieveUpdateDestroyAPIView):

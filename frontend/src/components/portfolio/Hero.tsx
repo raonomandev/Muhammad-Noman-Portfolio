@@ -24,18 +24,20 @@ export function Hero() {
               <span className="text-muted-foreground">Available for Backend Development Internships</span>
             </div>
 
-            <h1 className="mt-8 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="block text-foreground">Rao Noman</span>
-              <span className="block gradient-text animate-gradient">Backend Developer</span>
+            <h1 className="mt-8 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              <span className="block text-foreground">Muhammad Noman</span>
+              <span className="mt-2 block text-lg font-semibold tracking-[0.2em] text-muted-foreground uppercase sm:text-xl lg:text-2xl">
+                Backend Developer
+              </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground sm:text-lg">
-              Backend Developer focused on building secure REST APIs and scalable backend applications using Python, Django and Django REST Framework.
+            <p className="mt-5 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
+              I build secure REST APIs and scalable backend systems with Python, Django, and Django REST Framework.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="/resume.pdf"
+                href="public\Muhammad-Noman-Resume.pdf.pdf"
                 download="Rao-Noman-Resume.pdf"
                 target="_blank"
                 rel="noopener"
