@@ -245,7 +245,7 @@ https://github.com/raonomandev
 
 **LinkedIn**
 
-https://linkedin.com/in/raonomandev
+https://linkedin.com/in/rao-noman-dev
 
 **Email**
 
