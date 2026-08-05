@@ -6,7 +6,8 @@ The portfolio highlights my work with Python, Django, Django REST Framework, RES
 
 ## 🚀 Features
 
-- Modern responsive UI
+- Modern responsive UI<img width="1920" height="1080" alt="Screenshot (53)" src="https://github.com/user-attachments/assets/335800af-bbd1-4908-b3b8-63c6d002562c" />
+
 - Dark theme with gradient design
 - About section
 - Skills showcase
