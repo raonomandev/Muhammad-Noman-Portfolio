@@ -1,20 +1,20 @@
-﻿import { Server, Database, Sparkles } from "lucide-react";
+﻿import { Server, Database, Sparkles, Workflow } from "lucide-react";
 
 const highlights = [
   {
     icon: Server,
-    title: "Python, Django, DRF",
-    subtitle: "Backend development with Python, Django and Django REST Framework.",
+    title: "Backend & APIs",
+    subtitle: "Python, Django, DRF, and secure REST API development.",
   },
   {
     icon: Sparkles,
-    title: "REST APIs & JWT",
-    subtitle: "Designing secure REST APIs with JWT authentication and clean CRUD.",
+    title: "AI Integrations",
+    subtitle: "Connecting Claude, OpenAI, and Gemini models through APIs.",
   },
   {
-    icon: Database,
-    title: "MySQL & SQLite",
-    subtitle: "Reliable database design for maintainable backend systems.",
+    icon: Workflow,
+    title: "Workflow Automation",
+    subtitle: "Building n8n automations for connected tools and email workflows.",
   },
 ];
 
@@ -27,65 +27,69 @@ export function About() {
             <div>
               <p className="text-sm uppercase tracking-[0.35em] text-muted-foreground">About me</p>
               <h2 className="mt-5 text-4xl sm:text-5xl font-bold tracking-tight">
-                Backend engineering for secure, maintainable production systems.
+                Building useful software, from backend APIs to AI-powered workflows.
               </h2>
             </div>
 
-            <div className="space-y-5 rounded-[28px] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-slate-950/20">
+            <div className="space-y-5 rounded-[28px] border border-border bg-card/90 p-8 shadow-xl shadow-slate-950/20">
               <p className="text-lg leading-8 text-muted-foreground">
-                I’m <span className="font-semibold text-foreground">Muhammad Noman</span>, a Software Engineering student and backend developer specializing in Python, Django and Django REST Framework.
+                I’m <span className="font-semibold text-foreground">Muhammad Noman</span>, a Software Engineering student and backend developer working with Python, Django, and Django REST Framework.
               </p>
               <p className="text-lg leading-8 text-muted-foreground">
-                I design secure REST APIs, build scalable backend applications, and deliver reliable systems that solve real-world problems.
+                I build secure REST APIs and dependable backend applications, and deliver AI automations with n8n, API integrations, and LLMs including Claude, OpenAI, and Gemini.
               </p>
               <p className="text-lg leading-8 text-muted-foreground">
-                My focus is clean, maintainable code, strong backend architecture, and reliable data systems using MySQL and SQLite.
+                I design and deliver email marketing automations and connected business workflows that reduce repetitive work, with a focus on maintainable code, clear integrations, and reliable data handling.
               </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
               {highlights.map((item) => (
-                <div key={item.title} className="rounded-3xl border border-white/10 bg-slate-950/80 p-6 shadow-lg shadow-slate-950/10">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 text-foreground">
+                <div key={item.title} className="rounded-3xl border border-border bg-card/90 p-6 shadow-lg shadow-slate-950/10">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-muted/40 text-foreground">
                     <item.icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-4 text-sm font-semibold text-white">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-400">{item.subtitle}</p>
+                  <h3 className="mt-4 text-sm font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.subtitle}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-[32px] border border-white/10 bg-slate-950/90 p-8 shadow-2xl shadow-slate-950/20">
-            <p className="text-xs uppercase tracking-[0.35em] text-slate-500">Experience</p>
+          <div className="rounded-[32px] border border-border bg-card p-8 shadow-2xl shadow-slate-950/20">
+            <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">Focus Areas</p>
             <div className="mt-6 space-y-5">
-              <div className="rounded-3xl border border-white/10 bg-slate-900/90 p-6">
+              <div className="rounded-3xl border border-border bg-background/90 p-6">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-white">Backend Intern</h3>
-                    <p className="mt-2 text-sm text-slate-400">Enigmatix</p>
+                    <h3 className="text-xl font-semibold text-foreground">Backend Intern</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Enigmatix</p>
                   </div>
-                  <span className="rounded-full border border-white/10 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-emerald-300">
+                  <span className="portfolio-accent-chip rounded-full border border-white/10 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-emerald-300">
                     2025–2026
                   </span>
                 </div>
-                <p className="mt-5 text-sm leading-7 text-slate-400">
+                <p className="mt-5 text-sm leading-7 text-muted-foreground">
                   Gained practical experience in backend development, API integration, authentication systems, and professional software workflows.
                 </p>
               </div>
 
-              <div className="rounded-3xl border border-white/10 bg-slate-900/90 p-6">
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Skills & Tools</p>
+              <div className="rounded-3xl border border-border bg-background/90 p-6">
+                <p className="text-sm uppercase tracking-[0.35em] text-muted-foreground">Skills & Tools</p>
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
                   {[
                     "Python",
                     "Django",
                     "Django REST Framework",
                     "MySQL",
-                    "Postman",
+                    "n8n",
+                    "Claude API",
+                    "OpenAI API",
+                    "Gemini API",
+                    "Email Automation",
                     "Git & GitHub",
                   ].map((tool) => (
-                    <span key={tool} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200">
+                    <span key={tool} className="rounded-2xl border border-border bg-muted/40 px-4 py-3 text-sm text-foreground">
                       {tool}
                     </span>
                   ))}

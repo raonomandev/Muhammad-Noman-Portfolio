@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Alex Chen — Backend Developer & Systems Architect" },
+      { title: "Muhammad Noman | Backend Developer & AI Automation" },
       {
         name: "description",
         content:
-          "Portfolio of Alex Chen, senior backend developer specializing in distributed systems, scalable APIs, and cloud-native infrastructure.",
+          "Portfolio of Muhammad Noman, backend developer delivering Python, Django, REST API, n8n automation, and LLM integration services.",
       },
-      { name: "author", content: "Alex Chen" },
-      { property: "og:title", content: "Alex Chen — Backend Developer & Systems Architect" },
+      { name: "author", content: "Muhammad Noman" },
+      { property: "og:title", content: "Muhammad Noman | Backend Developer & AI Automation" },
       {
         property: "og:description",
         content:
-          "Distributed systems, scalable APIs, and cloud-native infrastructure — engineered with precision.",
+          "Python and Django APIs, n8n workflows, AI integrations, and practical automation services.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -97,6 +97,63 @@
   color-scheme: dark;
 }
 
+.light {
+  color-scheme: light;
+  --background: oklch(0.97 0.012 220);
+  --foreground: oklch(0.22 0.035 250);
+  --card: oklch(0.995 0.006 220);
+  --card-foreground: oklch(0.22 0.035 250);
+  --popover: oklch(0.995 0.006 220);
+  --popover-foreground: oklch(0.22 0.035 250);
+  --primary: oklch(0.56 0.16 205);
+  --primary-foreground: oklch(0.99 0.005 220);
+  --secondary: oklch(0.92 0.025 220);
+  --secondary-foreground: oklch(0.25 0.04 250);
+  --muted: oklch(0.93 0.02 220);
+  --muted-foreground: oklch(0.48 0.035 250);
+  --accent: oklch(0.91 0.045 190);
+  --accent-foreground: oklch(0.25 0.04 250);
+  --border: oklch(0.35 0.04 250 / 14%);
+  --input: oklch(0.35 0.04 250 / 18%);
+  --ring: oklch(0.56 0.16 205);
+  --gradient-primary: linear-gradient(135deg, oklch(0.57 0.16 205), oklch(0.58 0.14 160));
+  --gradient-text: linear-gradient(135deg, oklch(0.48 0.16 205), oklch(0.48 0.14 160));
+  --shadow-card: 0 8px 32px -16px oklch(0.35 0.04 250 / 18%);
+}
+
+.light .portfolio-accent-surface {
+  border-color: oklch(0.67 0.09 195 / 45%);
+  background: linear-gradient(135deg, oklch(0.93 0.045 195), oklch(0.91 0.045 160));
+  color: oklch(0.28 0.06 230);
+  box-shadow: 0 8px 22px -14px oklch(0.35 0.08 195 / 35%);
+}
+
+.light .portfolio-accent-icon {
+  color: oklch(0.32 0.1 210);
+}
+
+.light .portfolio-accent-chip {
+  border-color: oklch(0.67 0.09 195 / 45%);
+  background-color: oklch(0.91 0.045 190);
+  color: oklch(0.28 0.06 230);
+}
+
+.light .portfolio-accent-action {
+  border-color: oklch(0.64 0.1 195 / 65%);
+  background: linear-gradient(135deg, oklch(0.84 0.09 195), oklch(0.84 0.09 160));
+  color: oklch(0.2 0.04 240);
+  box-shadow: 0 5px 16px -10px oklch(0.3 0.08 195 / 50%);
+}
+
+.light .portfolio-accent-action:hover {
+  background: linear-gradient(135deg, oklch(0.8 0.1 195), oklch(0.8 0.1 160));
+}
+
+.light .portfolio-theme-controls :is(a, button) {
+  border-color: var(--border);
+  background-color: color-mix(in oklch, var(--muted) 78%, var(--card));
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -115,10 +172,21 @@
       radial-gradient(ellipse 60% 50% at 80% 100%, oklch(0.35 0.2 305 / 25%), transparent);
     background-attachment: fixed;
   }
+  .light body {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 20% 0%, oklch(0.83 0.07 205 / 28%), transparent),
+      radial-gradient(ellipse 60% 50% at 80% 100%, oklch(0.86 0.07 155 / 24%), transparent);
+  }
   ::selection {
     background: oklch(0.55 0.24 285 / 40%);
     color: var(--color-foreground);
   }
+}
+
+.light .glass-card {
+  background: color-mix(in oklch, var(--card) 88%, transparent);
+  border-color: var(--border);
+  box-shadow: var(--shadow-card);
 }
 
 @utility glass-card {

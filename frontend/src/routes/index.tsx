@@ -12,25 +12,25 @@ import { Footer } from "@/components/portfolio/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rao Noman | Backend Developer" },
+      { title: "Rao Noman | Backend Developer & AI Automation" },
       {
         name: "description",
         content:
-          "Backend Developer specializing in Python, Django, Django REST Framework, REST APIs and backend application development.",
+          "Muhammad Noman builds Python and Django APIs and delivers AI workflow automation with n8n, Claude, OpenAI, Gemini, and API integrations.",
       },
-      { property: "og:title", content: "Rao Noman | Backend Developer" },
+      { property: "og:title", content: "Rao Noman | Backend Developer & AI Automation" },
       {
         property: "og:description",
         content:
-          "Backend Developer specializing in Python, Django, Django REST Framework, REST APIs and backend application development.",
+          "Python and Django APIs, n8n automation, LLM integrations, and email workflow automation.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Rao Noman | Backend Developer" },
+      { name: "twitter:title", content: "Rao Noman | Backend Developer & AI Automation" },
       {
         name: "twitter:description",
         content:
-          "Backend Developer specializing in Python, Django, Django REST Framework, REST APIs and backend application development.",
+          "Python and Django APIs, n8n automation, LLM integrations, and email workflow automation.",
       },
     ],
   }),

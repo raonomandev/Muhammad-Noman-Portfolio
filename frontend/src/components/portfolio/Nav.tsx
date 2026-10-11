@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Github, Linkedin, Mail, Menu, X, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, Menu, X, FileText, Moon, Sun } from "lucide-react";
 
 const links = [
   { href: "#top", label: "Home" },
@@ -15,12 +15,28 @@ export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [emailOpen, setEmailOpen] = useState(false);
+  const [isLight, setIsLight] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const theme = window.localStorage.getItem("portfolio-theme");
+    if (theme === "light") {
+      document.documentElement.classList.replace("dark", "light");
+      setIsLight(true);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    document.documentElement.classList.toggle("light", !isLight);
+    document.documentElement.classList.toggle("dark", isLight);
+    window.localStorage.setItem("portfolio-theme", isLight ? "dark" : "light");
+    setIsLight(!isLight);
+  };
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -69,7 +85,20 @@ export function Nav() {
               </li>
             ))}
           </ul>
-          <div className="hidden md:flex items-center gap-2">
+          <div className="portfolio-theme-controls hidden items-center gap-2 md:flex">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+              title="Toggle color theme"
+              className="grid h-9 w-9 place-items-center rounded-full border border-white/10 bg-white/5 text-muted-foreground transition-colors hover:text-foreground sm:h-10 sm:w-10"
+            >
+              {isLight ? (
+                <Moon className="h-4 w-4" />
+              ) : (
+                <Sun className="h-4 w-4" />
+              )}
+            </button>
             <a
               href="https://github.com/raonomandev"
               target="_blank"
@@ -111,8 +140,17 @@ export function Nav() {
             </a>
           </div>
           <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+            title="Toggle color theme"
+            className="ml-auto mr-2 grid h-10 w-10 place-items-center rounded-xl border border-border bg-muted/40 text-muted-foreground transition-colors hover:text-foreground md:hidden"
+          >
+            {isLight ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+          </button>
+          <button
             onClick={() => setOpen(!open)}
-            className="md:hidden grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5"
+            className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-muted/40 md:hidden"
             aria-label="Toggle menu"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -133,7 +171,21 @@ export function Nav() {
                   </a>
                 </li>
               ))}
-              <li className="mt-2 flex flex-wrap gap-2">
+              <li>
+                <button
+                  type="button"
+                  onClick={toggleTheme}
+                  className="mt-2 inline-flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground hover:bg-white/5"
+                >
+                  {isLight ? (
+                    <Moon className="h-4 w-4" />
+                  ) : (
+                    <Sun className="h-4 w-4" />
+                  )}
+                  Switch to {isLight ? "dark" : "light"} mode
+                </button>
+              </li>
+              <li className="portfolio-theme-controls mt-2 flex flex-wrap gap-2">
                 <a
                   href="https://github.com/raonomandev"
                   target="_blank"
@@ -190,7 +242,7 @@ export function Nav() {
                 exit={{ opacity: 0, scale: 0.95, y: 16 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 onClick={(event) => event.stopPropagation()}
-                className="w-full max-w-md rounded-[24px] border border-white/10 bg-[rgba(8,12,22,0.9)] p-6 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl"
+                className="w-full max-w-md rounded-[24px] border border-border bg-card p-6 shadow-[0_20px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -202,7 +254,7 @@ export function Nav() {
                   <button
                     type="button"
                     onClick={() => setEmailOpen(false)}
-                    className="rounded-full border border-white/10 bg-white/10 p-2 text-muted-foreground transition hover:bg-white/20 hover:text-white"
+                    className="rounded-full border border-border bg-muted/40 p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground"
                   >
                     <X className="h-4 w-4" />
                   </button>

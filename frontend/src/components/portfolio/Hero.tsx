@@ -21,18 +21,18 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
-              <span className="text-muted-foreground">Available for Backend Development Internships</span>
+              <span className="text-muted-foreground">Open to backend and AI automation opportunities</span>
             </div>
 
             <h1 className="mt-8 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               <span className="block text-foreground">Muhammad Noman</span>
               <span className="mt-2 block text-lg font-semibold tracking-[0.2em] text-muted-foreground uppercase sm:text-xl lg:text-2xl">
-                Backend Developer
+                Backend Developer · AI Automation
               </span>
             </h1>
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
-              I build secure REST APIs and scalable backend systems with Python, Django, and Django REST Framework.
+              I build secure Python and Django APIs, and connect tools, data, and AI models into practical automated workflows.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -67,7 +67,7 @@ export function Hero() {
               <motion.div
                 animate={{ y: [0, -8, 0], rotate: [0, 0.8, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="relative rounded-full border border-white/10 bg-slate-950/60 p-2.5 shadow-[0_0_35px_rgba(34,211,238,0.12)] backdrop-blur"
+                className="relative rounded-full border border-border bg-card/80 p-2.5 shadow-[0_0_35px_rgba(34,211,238,0.12)] backdrop-blur"
               >
                 <div className="relative rounded-full p-[3px]" style={{ background: "linear-gradient(135deg, oklch(0.65 0.22 275), oklch(0.75 0.15 210))" }}>
                   <div className="rounded-full bg-background p-2">

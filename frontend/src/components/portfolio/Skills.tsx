@@ -1,4 +1,4 @@
-import { Server, Database, Wrench, GraduationCap } from "lucide-react";
+import { Server, Database, Wrench, GraduationCap, Workflow } from "lucide-react";
 
 const groups = [
   {
@@ -9,9 +9,23 @@ const groups = [
       "Django",
       "Django REST Framework",
       "REST APIs",
+      "API Integrations",
       "JWT Authentication",
       "CRUD Operations",
       "Authentication",
+    ],
+  },
+  {
+    icon: Workflow,
+    title: "AI & Automation",
+    items: [
+      "n8n",
+      "AI Workflows",
+      "Claude",
+      "OpenAI",
+      "Gemini",
+      "LLM API Integration",
+      "Email Marketing Automation",
     ],
   },
   {
@@ -22,7 +36,7 @@ const groups = [
   {
     icon: Wrench,
     title: "Tools",
-    items: ["Git", "GitHub", "Postman", "VS Code"],
+    items: ["Git", "GitHub", "Postman", "VS Code", "REST APIs"],
   },
   {
     icon: GraduationCap,
@@ -43,11 +57,11 @@ export function Skills() {
             Skills & <span className="gradient-text">Technologies</span>.
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            A pragmatic toolchain tuned for reliability, clean architecture, and speed.
+            Backend engineering, AI integrations, and automation tools for building connected, reliable workflows.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {groups.map((g) => (
             <div key={g.title} className="glass-card rounded-2xl p-6">
               <div className="flex items-center gap-3">
@@ -60,7 +74,7 @@ export function Skills() {
                 {g.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-mono text-muted-foreground transition-colors hover:text-foreground hover:border-primary/40"
+                    className="rounded-md border border-border bg-muted/40 px-2 py-1 text-xs font-mono text-muted-foreground transition-colors hover:text-foreground hover:border-primary/40"
                   >
                     {item}
                   </li>

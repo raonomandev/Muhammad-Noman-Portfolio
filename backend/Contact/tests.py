@@ -22,6 +22,19 @@ class EmailSettingsTests(SimpleTestCase):
     OWNER_NOTIFICATION_EMAIL="owner@example.com",
 )
 class ContactEmailFlowTests(APITestCase):
+    def test_contact_submissions_cannot_be_listed_anonymously(self):
+        contact = ContactModel.objects.create(
+            name="Private Contact",
+            email="private@example.com",
+            message="This message must not be exposed.",
+        )
+
+        list_response = self.client.get("/api/contact/")
+        detail_response = self.client.get(f"/api/contact/{contact.id}/")
+
+        self.assertEqual(list_response.status_code, 405)
+        self.assertEqual(detail_response.status_code, 403)
+
     def test_contact_submission_saves_contact_and_enqueues_confirmation_task(self):
         with patch("Contact.views.send_contact_confirmation_email.delay") as mock_delay:
             response = self.client.post(

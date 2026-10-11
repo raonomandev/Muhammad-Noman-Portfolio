@@ -10,7 +10,7 @@ const navLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 mt-16">
+    <footer className="relative mt-16 overflow-hidden border-t border-border">
       {/* Ambient gradient glow */}
       <div
         className="pointer-events-none absolute inset-x-0 -top-32 h-64 opacity-60"
@@ -28,7 +28,7 @@ export function Footer() {
                 <span className="text-primary">.</span>
               </a>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
-                Backend Developer building scalable web applications and modern APIs.
+                Backend developer building APIs and exploring useful AI-powered automations.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="GitHub"
-                  className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:text-foreground hover:shadow-lg hover:shadow-primary/20"
+                  className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-muted/40 text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:text-foreground hover:shadow-lg hover:shadow-primary/20"
                 >
                   <Github className="h-4 w-4" />
                 </a>
@@ -74,7 +74,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
-                  className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5 text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:text-foreground hover:shadow-lg hover:shadow-primary/20"
+                  className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-muted/40 text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:text-foreground hover:shadow-lg hover:shadow-primary/20"
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
@@ -83,12 +83,12 @@ export function Footer() {
           </div>
 
           {/* Divider + copyright */}
-          <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 sm:flex-row">
             <p className="text-xs text-muted-foreground">
               © 2026 Rao Noman. All rights reserved.
             </p>
             <p className="text-xs font-mono text-muted-foreground/70">
-              Backend Developer | Python · Django · Django REST Framework
+              Python · Django · REST APIs · n8n · AI Integrations
             </p>
           </div>
         </div>
