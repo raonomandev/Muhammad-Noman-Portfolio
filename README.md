@@ -82,22 +82,22 @@ For a deployed frontend, set `VITE_API_URL` to the public backend API base URL, 
 # 📸 Portfolio Preview
 
 <p align="center">
-  <img src="./screenshots/Home.png" width="90%">
+  <img src="./screenshots/home.png" width="90%">
 </p>
 
 <p align="center">
-  <img src="./screenshots/About.png" width="48%">
-  <img src="./screenshots/Experience.png" width="48%">
+  <img src="./screenshots/about.png" width="48%">
+  <img src="./screenshots/experience.png" width="48%">
 </p>
 
 <p align="center">
   <img src="./screenshots/Skills.png" width="48%">
-  <img src="./screenshots/Services.png" width="48%">
+  <img src="./screenshots/services.png" width="48%">
 </p>
 
 <p align="center">
   <img src="./screenshots/Projects_.png" width="48%">
-  <img src="./screenshots/Contact.png" width="48%">
+  <img src="./screenshots/contact.png" width="48%">
 </p>
 
 ---
@@ -110,15 +110,14 @@ For a deployed frontend, set `VITE_API_URL` to the public backend API base URL, 
 Muhammad-Noman-Portfolio
 │
 ├── backend/
-│   ├── config/                 # Django settings, API URLs, and Celery setup
-│   ├── Contact/                # Contact API, models, and async email task
+│   ├── config/                 # Django project configuration and Celery
+│   ├── Contact/                # Contact API Django application
 │   └── templates/emails/       # Contact email templates
 │
 ├── frontend/
 │   └── src/
-│       ├── routes/             # TanStack Start routes
-│       ├── components/
-│       │   └── portfolio/      # Skills, services, projects, and page sections
+│       ├── routes/             # TanStack Start application routes
+│       ├── components/         # Portfolio sections and shared UI
 │       └── lib/                # API client and shared utilities
 │
 ├── screenshots/
