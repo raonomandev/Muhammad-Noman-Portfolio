@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1440" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08142E"/>
+      <stop offset="1" stop-color="#120D29"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#48D6F5"/>
+      <stop offset="1" stop-color="#A76BFF"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#14213D"/>
+      <stop offset="1" stop-color="#15152D"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1 1L8 5L1 9" stroke="#7186B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      text { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+      .muted { fill: #A7B3CC; }
+      .label { fill: #DCE5F7; font-size: 16px; }
+      .detail { fill: #A7B3CC; font-size: 14px; }
+      .code { fill: #B8C9EA; font-family: Consolas, "Courier New", monospace; font-size: 13px; }
+    </style>
+  </defs>
+
+  <rect width="1440" height="900" rx="28" fill="url(#background)"/>
+  <circle cx="1300" cy="90" r="220" fill="#5131A0" opacity=".12"/>
+  <circle cx="120" cy="820" r="250" fill="#087F9D" opacity=".09"/>
+
+  <text x="72" y="73" fill="#91A6CE" font-size="14" font-weight="600" letter-spacing="3">MUHAMMAD NOMAN · PORTFOLIO</text>
+  <text x="72" y="127" fill="#F3F6FF" font-size="38" font-weight="700">Project structure</text>
+  <text x="72" y="160" class="muted" font-size="17">A full-stack portfolio for backend engineering, AI integrations, and automation services.</text>
+
+  <rect x="72" y="195" width="1296" height="58" rx="16" fill="#111D38" stroke="#344568"/>
+  <rect x="92" y="211" width="26" height="26" rx="8" fill="url(#accent)"/>
+  <path d="M99 220h12M99 225h8M99 230h10" stroke="#F7F8FF" stroke-width="1.7" stroke-linecap="round"/>
+  <text x="132" y="231" fill="#ECF2FF" font-size="16" font-weight="650">Muhammad-Noman-Portfolio</text>
+  <text x="1190" y="230" class="muted" font-size="14">React · TypeScript · Django</text>
+
+  <path d="M720 253v25M275 278h890M275 278v20M720 278v20M1165 278v20" stroke="#52668E" stroke-width="1.5" fill="none"/>
+
+  <rect x="72" y="298" width="406" height="374" rx="20" fill="url(#panel)" stroke="#344568"/>
+  <rect x="72" y="298" width="406" height="4" rx="2" fill="#48D6F5"/>
+  <text x="100" y="342" fill="#77DDF3" font-size="13" font-weight="700" letter-spacing="2">01 · FRONTEND</text>
+  <text x="100" y="380" fill="#F2F5FF" font-size="24" font-weight="700">frontend/</text>
+  <text x="100" y="411" class="detail">React 19 · TypeScript · TanStack Start</text>
+  <path d="M100 433h350" stroke="#344568"/>
+  <text x="100" y="466" class="code">src/routes/</text>
+  <text x="242" y="466" class="detail">Application routes</text>
+  <text x="100" y="501" class="code">src/components/portfolio/</text>
+  <text x="100" y="525" class="detail">Hero · About · Skills · Services</text>
+  <text x="100" y="548" class="detail">Projects · Experience · Contact</text>
+  <text x="100" y="584" class="code">src/lib/</text>
+  <text x="242" y="584" class="detail">API client and utilities</text>
+  <text x="100" y="619" class="code">public/</text>
+  <text x="242" y="619" class="detail">Resume and static assets</text>
+
+  <rect x="517" y="298" width="406" height="374" rx="20" fill="url(#panel)" stroke="#344568"/>
+  <rect x="517" y="298" width="406" height="4" rx="2" fill="#8A73FF"/>
+  <text x="545" y="342" fill="#A894FF" font-size="13" font-weight="700" letter-spacing="2">02 · BACKEND</text>
+  <text x="545" y="380" fill="#F2F5FF" font-size="24" font-weight="700">backend/</text>
+  <text x="545" y="411" class="detail">Django · Django REST Framework</text>
+  <path d="M545 433h350" stroke="#344568"/>
+  <text x="545" y="466" class="code">config/</text>
+  <text x="680" y="466" class="detail">Settings · URLs · Celery</text>
+  <text x="545" y="501" class="code">Contact/</text>
+  <text x="680" y="501" class="detail">Contact API and data models</text>
+  <text x="545" y="536" class="code">Contact/tasks.py</text>
+  <text x="545" y="560" class="detail">Asynchronous confirmation and</text>
+  <text x="545" y="583" class="detail">owner notification emails</text>
+  <text x="545" y="619" class="code">templates/emails/</text>
+  <text x="725" y="619" class="detail">Email templates</text>
+
+  <rect x="962" y="298" width="406" height="374" rx="20" fill="url(#panel)" stroke="#344568"/>
+  <rect x="962" y="298" width="406" height="4" rx="2" fill="#C178FF"/>
+  <text x="990" y="342" fill="#D2A0FF" font-size="13" font-weight="700" letter-spacing="2">03 · PORTFOLIO SHOWCASE</text>
+  <text x="990" y="380" fill="#F2F5FF" font-size="24" font-weight="700">Skills &amp; services</text>
+  <text x="990" y="411" class="detail">Capabilities presented in the portfolio UI</text>
+  <path d="M990 433h350" stroke="#344568"/>
+  <text x="990" y="466" class="code">Skills.tsx</text>
+  <text x="990" y="491" class="detail">n8n · Make.com · Zapier</text>
+  <text x="990" y="514" class="detail">AI agents · Chatbots · LLM integrations</text>
+  <text x="990" y="549" class="code">Services.tsx</text>
+  <text x="990" y="574" class="detail">Automation and integration services</text>
+  <text x="990" y="609" class="code">Projects.tsx</text>
+  <text x="990" y="634" class="detail">Featured backend projects</text>
+
+  <path d="M478 485h33" stroke="#7186B8" stroke-width="1.7" marker-end="url(#arrow)"/>
+  <rect x="475" y="452" width="42" height="22" rx="11" fill="#101B34"/>
+  <text x="482" y="467" fill="#A7B3CC" font-size="11">API</text>
+
+  <path d="M720 672v36" stroke="#7186B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="72" y="720" width="1296" height="112" rx="20" fill="#111D38" stroke="#344568"/>
+  <rect x="96" y="744" width="42" height="42" rx="13" fill="#202849"/>
+  <path d="M108 758h18M108 765h18M108 772h12" stroke="#91A6CE" stroke-width="1.8" stroke-linecap="round"/>
+  <text x="160" y="756" fill="#F2F5FF" font-size="18" font-weight="700">Contact email workflow</text>
+  <text x="160" y="784" class="detail">Django task → Celery worker → confirmation to visitor + notification to owner</text>
+  <text x="160" y="808" class="code">Redis broker · SMTP delivery · templates in backend/templates/emails/</text>
+  <text x="1110" y="778" fill="#9DAFD2" font-size="13" font-weight="600">SCREENSHOTS &amp; DOCS</text>
+  <text x="1110" y="801" class="detail">screenshots/ · README.md</text>
+</svg>

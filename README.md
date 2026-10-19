@@ -82,46 +82,52 @@ For a deployed frontend, set `VITE_API_URL` to the public backend API base URL, 
 # 📸 Portfolio Preview
 
 <p align="center">
-  <img src="./screenshots/home.png" width="90%">
+  <img src="./screenshots/Home.png" width="90%">
 </p>
 
 <p align="center">
-  <img src="./screenshots/about.png" width="48%">
-  <img src="./screenshots/experience.png" width="48%">
+  <img src="./screenshots/About.png" width="48%">
+  <img src="./screenshots/Experience.png" width="48%">
 </p>
 
 <p align="center">
-  <img src="./screenshots/skills.png" width="48%">
-  <img src="./screenshots/services.png" width="48%">
+  <img src="./screenshots/Skills.png" width="48%">
+  <img src="./screenshots/Services.png" width="48%">
 </p>
 
 <p align="center">
-  <img src="./screenshots/projects.png" width="48%">
-  <img src="./screenshots/contact.png" width="48%">
+  <img src="./screenshots/Projects_.png" width="48%">
+  <img src="./screenshots/Contact.png" width="48%">
 </p>
 
 ---
 
 ## 📁 Project Structure
 
+![Project architecture](./screenshots/project-structure.svg)
+
 ```text
 Muhammad-Noman-Portfolio
 │
 ├── backend/
+│   ├── config/                 # Django settings, API URLs, and Celery setup
+│   ├── Contact/                # Contact API, models, and async email task
+│   └── templates/emails/       # Contact email templates
 │
 ├── frontend/
+│   └── src/
+│       ├── routes/             # TanStack Start routes
+│       ├── components/
+│       │   └── portfolio/      # Skills, services, projects, and page sections
+│       └── lib/                # API client and shared utilities
 │
 ├── screenshots/
-│   ├── home.png
-│   ├── about.png
-│   ├── experience.png
-│   ├── services.png
-│   ├── projects.png
-│   └── contact.png
+│   ├── Skills.png
+│   ├── Projects_.png
+│   └── project-structure.svg
 │
 ├── README.md
-│
-└── .gitignore
+└── requirements.txt
 ```
 
 ---
