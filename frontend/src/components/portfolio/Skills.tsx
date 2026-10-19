@@ -20,7 +20,14 @@ const groups = [
     title: "AI & Automation",
     items: [
       "n8n",
+      "Make.com",
+      "Zapier",
+      "AI Agents",
+      "AI Chatbots",
       "AI Workflows",
+      "Workflow Automation",
+      "Webhook Automation",
+      "Prompt Engineering",
       "Claude",
       "OpenAI",
       "Gemini",
@@ -57,7 +64,8 @@ export function Skills() {
             Skills & <span className="gradient-text">Technologies</span>.
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Backend engineering, AI integrations, and automation tools for building connected, reliable workflows.
+            Backend engineering, AI integrations, and automation tools for building connected,
+            reliable workflows.
           </p>
         </div>
 

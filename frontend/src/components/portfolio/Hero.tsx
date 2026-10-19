@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
-import profile from "@/assets/rao-profile.jpg";
+import profile from "@/assets/rao-profile.png";
 
 export function Hero() {
   return (
@@ -27,7 +27,7 @@ export function Hero() {
             <h1 className="mt-8 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               <span className="block text-foreground">Muhammad Noman</span>
               <span className="mt-2 block text-lg font-semibold tracking-[0.2em] text-muted-foreground uppercase sm:text-xl lg:text-2xl">
-                Backend Developer · AI Automation
+                Backend Developer · AI Automation Engineer
               </span>
             </h1>
 
@@ -76,7 +76,7 @@ export function Hero() {
                       alt="Rao Noman — Backend Developer"
                       width={360}
                       height={360}
-                      className="h-[260px] w-[260px] rounded-full object-cover object-center sm:h-[300px] sm:w-[300px] lg:h-[330px] lg:w-[330px]"
+                      className="h-[260px] w-[260px] rounded-full object-cover object-[center_18%] sm:h-[300px] sm:w-[300px] lg:h-[330px] lg:w-[330px]"
                     />
                   </div>
                 </div>

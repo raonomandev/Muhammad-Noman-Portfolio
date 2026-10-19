@@ -46,8 +46,8 @@ const projects: ProjectItem[] = [
     icon: Workflow,
     title: "AI Lead Scoring & Automation",
     description:
-      "A Django REST API receives new leads and an n8n workflow uses an AI model to score buying intent, classify leads as hot, warm, or cold, and route them to the appropriate follow-up steps.",
-    tech: ["Python", "Django REST Framework", "n8n", "OpenAI", "Webhooks", "Gmail"],
+      "A JavaScript-powered lead intake flow sends new leads to n8n, where an AI model scores buying intent, classifies leads as hot, warm, or cold, and routes them to the appropriate follow-up steps.",
+    tech: ["Java Script", "n8n", "OpenAI", "Webhooks", "Gmail"],
     repo: null,
     demoUrls: [
       "https://www.loom.com/share/6a3430a82a6f483db761d5614b82ca92",
